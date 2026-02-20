@@ -21,7 +21,7 @@ def generate_launch_description():
         name='robot_state_publisher',
         output='screen',
         parameters=[{'use_sim_time': use_sim_time,
-            'robot_description': Command(['xacro ', LaunchConfiguration('model')])
+            'robot_description': Command(['xacro', LaunchConfiguration('model')])
             }]
     )
     joint_state_publisher_node = launch_ros.actions.Node(
